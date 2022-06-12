@@ -1,0 +1,212 @@
+<!--
+          boost:
+          0. component
+          1. parent>child
+          2. class naming strategy
+          3. data-* attributes
+          4. id/href attributes
+          5. aria attributes
+      -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css"
+    />
+    <style>
+      body {
+        background-color: #335;
+      }
+      @media (min-widht: 991px) {
+        .w-lg-75 {
+          width: 75%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand" href="#"> BRAND </a>
+        <button
+          class="navbar-toggler"
+          data-bs-toggle="collapse"
+          data-bs-target="#main-navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!--center container with this class-->
+        <div
+          class="collapse navbar-collapse justify-content-between w-lg-75"
+          id="main-navigation"
+        >
+          <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="">Tutorials</a></li>
+            <li class="nav-item"><a class="nav-link" href="">Examples</a></li>
+            <li class="nav-item">
+              <a class="nav-link active" href="">Docs</a>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="">Contacts</a></li>
+            <li class="nav-item"><a class="nav-link" href="">Services</a></li>
+          </ul>
+        </div>
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a href="" class="nav-link"><i class="bi bi-people-fill"></i></a>
+          </li>
+          <li class="nav-item">
+            <a
+              href=""
+              class="nav-link"
+              data-bs-toggle="modal"
+              data-bs-target="#cart-modal"
+              ><i class="bi bi-bag-fill"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!-- Modal -->
+    <div class="modal fade" id="cart-modal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Your cart</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <!---MODAL BODY-->
+
+            <!---
+            HW:1 add products list :
+            -list group
+           -table
+
+           product: img, name,  quantity, item price 2-3
+
+      -->
+            <ul class="list-group">
+              <li
+                class="list-group-item list-group-item-dark d-flex justify-content-between align-items-center"
+              >
+                <i class="bi bi-phone-fill"></i>
+              </li>
+              <li
+                class="list-group-item d-flex justify-content-between align-items-center"
+              >
+                iPhone 13
+              </li>
+              <li
+                class="list-group-item d-flex justify-content-between align-items-center"
+              >
+                1
+              </li>
+              <li
+                class="list-group-item d-flex justify-content-between align-items-center"
+              >
+                800$
+              </li>
+            </ul>
+            <ul class="list-group">
+              <li
+                class="list-group-item list-group-item-dark d-flex justify-content-between align-items-center"
+              >
+                <i class="bi bi-alarm-fill"></i>
+              </li>
+              <li
+                class="list-group-item d-flex justify-content-between align-items-center"
+              >
+                Apple Watch
+              </li>
+              <li
+                class="list-group-item d-flex justify-content-between align-items-center"
+              >
+                1
+              </li>
+              <li
+                class="list-group-item d-flex justify-content-between align-items-center"
+              >
+                400$
+              </li>
+            </ul>
+            <ul class="list-group">
+              <li
+                class="list-group-item list-group-item-dark d-flex justify-content-between align-items-center"
+              >
+                <i class="bi bi-droplet-fill"></i>
+              </li>
+              <li
+                class="list-group-item d-flex justify-content-between align-items-center"
+              >
+                Water
+              </li>
+              <li
+                class="list-group-item d-flex justify-content-between align-items-center"
+              >
+                2
+              </li>
+              <li
+                class="list-group-item d-flex justify-content-between align-items-center"
+              >
+                3$
+              </li>
+            </ul>
+            <ul class="list-group">
+              <li
+                class="list-group-item list-group-item-primary d-flex justify-content-between align-items-center"
+              >
+                TOTAL
+              </li>
+              <li
+                class="list-group-item d-flex justify-content-between align-items-center"
+              >
+                1203$
+              </li>
+            </ul>
+          </div>
+          <!--
+              Add buttons :
+
+              checkout / empty items
+              (bootstrap --buttons)
+            -->
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-light btn-outline-secondary"
+              data-bs-dismiss="modal"
+            >
+              <i class="bi bi-cart-check-fill"></i>
+              CHECKOUT
+            </button>
+            <button type="button" class="btn btn-light btn-outline-secondary">
+              <i class="bi bi-trash3-fill"></i>
+              EMPTY ITEMS
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
